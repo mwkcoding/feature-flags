@@ -1,13 +1,13 @@
 <?php
 
-namespace Mwkcoding\FeatureFlags;
+namespace Mwk\FeatureFlags;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Mwkcoding\FeatureFlags\Skeleton\SkeletonClass
+ * @see \Mwk\FeatureFlags\FeatureManager
  */
-class FeatureFlagsFacade extends Facade
+class FeatureManagerFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class FeatureFlagsFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'feature-flags';
+        return 'feature-manager';
     }
 }

@@ -1,9 +1,10 @@
 {
-    "name": "mwkcoding/feature-flags",
+    "name": "mwkcoding/laravel-feature-flags",
     "description": "A simple Laravel package to get feature flags in your project.",
     "keywords": [
         "mwkcoding",
-        "feature-flags"
+        "feature-flags",
+        "laravel"
     ],
     "homepage": "https://github.com/mwkcoding/feature-flags",
     "license": "MIT",
@@ -17,37 +18,41 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^8.0",
+        "spatie/laravel-sluggable": "^3.1"
     },
     "require-dev": {
+        "doctrine/dbal": "^3.1",
+        "nunomaduro/collision": "^5.9",
         "orchestra/testbench": "^6.0",
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "Mwkcoding\\FeatureFlags\\": "src"
+            "Mwk\\FeatureFlags\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mwkcoding\\FeatureFlags\\Tests\\": "tests"
+            "Mwk\\FeatureFlags\\Tests\\": "tests"
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/testbench package:test --no-coverage",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
-                "Mwkcoding\\FeatureFlags\\FeatureFlagsServiceProvider"
+                "Mwk\\FeatureFlags\\FeatureFlagsServiceProvider"
             ],
             "aliases": {
-                "FeatureFlags": "Mwkcoding\\FeatureFlags\\FeatureFlagsFacade"
+                "FeatureFlags": "Mwk\\FeatureFlags\\FeatureFlagsFacade"
             }
         }
     }
