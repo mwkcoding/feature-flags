@@ -1,10 +1,14 @@
-# Very short description of the package
+# Laravel Feature Flags &#128640;
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/feature-flags)
 [![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/feature-flags)
 ![GitHub Actions](https://github.com/mwkcoding/feature-flags/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+A Feature flag is at times referred to as a feature toggle or feature switch. Ultimately it's a coding strategy to be used along with source control to make it easier to continuously integrate and deploy. The idea of the flags works by essentially safe guarding sections of code from executing if a feature flag isn't in a switched on state.
+
+This package aims to make implementing such flags across your application a great deal easier by providing solutions that work with not only your code but your routes, blade files, task scheduling and validations.
+
+
 
 ## Installation
 
@@ -12,6 +16,12 @@ You can install the package via composer:
 
 ```bash
 composer require mwkcoding/feature-flags
+```
+
+Publish the config:
+
+```bash
+php artisan vendor:publish --provider="Mwk\FeatureFlags\FeatureFlagsServiceProvider" --tag="config"
 ```
 
 ## Usage
