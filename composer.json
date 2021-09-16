@@ -18,8 +18,8 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0",
-        "spatie/laravel-sluggable": "^3.1"
+        "illuminate/support": "^7.0|^8.0",
+        "spatie/laravel-sluggable": "^2.6|^3.1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.1",
