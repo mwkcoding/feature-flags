@@ -1,8 +1,10 @@
 # Laravel Feature Flags &#128640;
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/laravel-feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
-[![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/laravel-feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
 ![GitHub Actions](https://github.com/mwkcoding/feature-flags/actions/workflows/main.yml/badge.svg)
+![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/mwkcoding/feature-flags/latest/master?sort=semver&style=flat)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/laravel-feature-flags.svg?style=flat)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
+[![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/laravel-feature-flags.svg?style=flat)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/mwkcoding/laravel-feature-flags)
 
 A Feature flag is at times referred to as a feature toggle or feature switch. Ultimately it's a coding strategy to be used along with source control to make it easier to continuously integrate and deploy. The idea of the flags works by essentially safe guarding sections of code from executing if a feature flag isn't in a switched on state.
 
@@ -26,8 +28,20 @@ php artisan vendor:publish --provider="Mwk\FeatureFlags\FeatureFlagsServiceProvi
 
 ## Usage
 
+### In your controllers, jobs, etc.
 ```php
-// Usage description here
+// Check if a feature is enabled in your backend logic
+use Mwk\FeatureFlags\FeatureManagerFacade;
+
+if (FeatureManagerFacade::feature('my-feature')->enabled()) {
+    // Your feature specific logic
+}
+```
+### Blade views
+```php
+@feature('my-feature')
+    <p>Feature turned on</p>
+@endfeature
 ```
 
 ### Testing
