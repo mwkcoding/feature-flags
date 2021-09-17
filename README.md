@@ -1,7 +1,7 @@
 # Laravel Feature Flags &#128640;
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/feature-flags)
-[![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/feature-flags)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/laravel-feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
+[![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/laravel-feature-flags.svg?style=flat-square)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
 ![GitHub Actions](https://github.com/mwkcoding/feature-flags/actions/workflows/main.yml/badge.svg)
 
 A Feature flag is at times referred to as a feature toggle or feature switch. Ultimately it's a coding strategy to be used along with source control to make it easier to continuously integrate and deploy. The idea of the flags works by essentially safe guarding sections of code from executing if a feature flag isn't in a switched on state.
