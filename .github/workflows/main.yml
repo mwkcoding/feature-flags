@@ -42,4 +42,12 @@ jobs:
                   composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
                   composer update --${{ matrix.stability }} --prefer-dist --no-interaction
             - name: Execute tests
-              run: vendor/bin/phpunit
+              run: vendor/bin/phpunit --coverage-clover ./coverage/reports/
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v2
+              with:
+                directory: ./coverage/reports/
+                env_vars: OS
+                fail_ci_if_error: true
+                flags: testsuite
+                name: codecov-umbrella
