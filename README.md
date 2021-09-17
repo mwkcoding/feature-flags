@@ -5,6 +5,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mwkcoding/laravel-feature-flags.svg?style=flat)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
 [![Total Downloads](https://img.shields.io/packagist/dt/mwkcoding/laravel-feature-flags.svg?style=flat)](https://packagist.org/packages/mwkcoding/laravel-feature-flags)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/mwkcoding/laravel-feature-flags)
+[![codecov](https://codecov.io/gh/mwkcoding/feature-flags/branch/master/graph/badge.svg?token=Y6INBZHEOZ)](https://codecov.io/gh/mwkcoding/feature-flags)
 
 A Feature flag is at times referred to as a feature toggle or feature switch. Ultimately it's a coding strategy to be used along with source control to make it easier to continuously integrate and deploy. The idea of the flags works by essentially safe guarding sections of code from executing if a feature flag isn't in a switched on state.
 
