@@ -16,6 +16,6 @@ class FeatureManagerFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'feature-manager';
+        return FeatureManager::class;
     }
 }
